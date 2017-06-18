@@ -1,3 +1,3 @@
 # dotfiles
 
-run ~/.dotfiles/scripts/install
+run ~/.dotfiles/scripts/bootstrap
