@@ -11,6 +11,8 @@ brew 'readline'
 brew 'wget'
 brew 'vim', args: ["with-override-system-vi", "with-lua"]
 brew 'autoenv'
+brew 'awscli'
+brew 'zsh-git-prompt'
 
 cask 'slack'
 cask 'steam'
