@@ -16,3 +16,4 @@ brew 'zsh-git-prompt'
 
 cask 'slack'
 cask 'steam'
+cask 'viscosity'
