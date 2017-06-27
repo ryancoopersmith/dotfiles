@@ -1,4 +1,41 @@
+set nocompatible
 syntax on
 
-" Wrap gitcommit file types at the appropriate length
+" Set tabs to 2 spaces
+set si
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+"filetype plugins 
 filetype indent plugin on
+
+" autocomplete
+set omnifunc=syntaxcomplete#Complete
+set completeopt+=longest 
+
+"status line
+set laststatus=2
+set ruler
+set showcmd
+set showmode
+
+" line numbering  
+set number
+set relativenumber
+
+" search behavior
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+"block matching
+set showmatch
+set matchtime=3
+
+" display styling
+set tgc
+set title
+set vb
+colorscheme solarized8_light
