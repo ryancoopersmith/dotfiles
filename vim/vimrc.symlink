@@ -37,5 +37,6 @@ set matchtime=3
 " display styling
 set tgc
 set title
+set titleold=""
 set vb
 colorscheme solarized8_light
