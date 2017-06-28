@@ -39,4 +39,9 @@ set tgc
 set title
 set titleold=""
 set vb
-colorscheme solarized8_light
+colorscheme solarized8_dark
+
+"airline theme
+let g:airline_theme='solarized'
+let g:airline_solarized_bg='dark'
+
