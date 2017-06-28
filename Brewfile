@@ -13,6 +13,8 @@ brew 'vim', args: ["with-override-system-vi", "with-lua"]
 brew 'autoenv'
 brew 'awscli'
 brew 'zsh-git-prompt'
+brew 'jsonlint'
+brew 'proselint'
 
 cask 'slack'
 cask 'steam'

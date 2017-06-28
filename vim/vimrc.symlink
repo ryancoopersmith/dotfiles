@@ -1,18 +1,20 @@
 set nocompatible
 syntax on
 
+set mouse=a
+
 " Set tabs to 2 spaces
 set si
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
-"filetype plugins 
+"filetype plugins
 filetype indent plugin on
 
 " autocomplete
 set omnifunc=syntaxcomplete#Complete
-set completeopt+=longest 
+set completeopt+=longest
 
 "status line
 set laststatus=2
@@ -20,7 +22,7 @@ set ruler
 set showcmd
 set showmode
 
-" line numbering  
+" line numbering
 set number
 set relativenumber
 
@@ -45,3 +47,20 @@ colorscheme solarized8_dark
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
 
+"update time (update git status faster)
+set updatetime=250
+
+"syntastic
+let g:syntastic_always_polulate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_id_checkers = 1
+
+
+let g:syntastic_markdown_checkers = ["proselint"]
+let g:syntastic_javascript_checkers = ["eslint"]
+let g:syntastic_go_checkers = ["go"]
+let g:syntastic_json_checkers = ["jsonlint"]
+let g:syntastic_ruby_checkers = ["mri"]

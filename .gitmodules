@@ -10,3 +10,6 @@
 [submodule "vim.symlink/pack/plugins/start/vim-gitgutter"]
 	path = vim.symlink/pack/plugins/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim.symlink/pack/plugins/start/syntastic"]
+	path = vim.symlink/pack/plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
