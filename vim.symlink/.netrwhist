@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/eric/.vim'
-let g:netrw_dirhist_2='/Users/eric/.dotfiles'
-let g:netrw_dirhist_3='/Users/eric/.dotfiles/vim.symlink'
-let g:netrw_dirhist_4='/Users/eric/.dotfiles/vim.symlink/pack'
-let g:netrw_dirhist_5='/Users/eric/.dotfiles/vim.symlink/pack/plugins'
-let g:netrw_dirhist_6='/Users/eric/.dotfiles/vim.symlink/pack/plugins/start'
-let g:netrw_dirhist_7='/Users/eric/.dotfiles/vim.symlink/pack/plugins/start/vim-gitgutter'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/eric/.dotfiles/vim.symlink'

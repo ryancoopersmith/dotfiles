@@ -43,9 +43,14 @@ set titleold=""
 set vb
 colorscheme solarized8_dark
 
-"airline theme
+"netrw
+let g:netrw_listsytle = 2
+let g:netrw_browse_split = 3
+
+"airline
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
+let g:airline#extensions#tabline#enabled = 1
 
 "update time (update git status faster)
 set updatetime=250
@@ -58,9 +63,10 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_id_checkers = 1
 
-
 let g:syntastic_markdown_checkers = ["proselint"]
 let g:syntastic_javascript_checkers = ["eslint"]
 let g:syntastic_go_checkers = ["go"]
 let g:syntastic_json_checkers = ["jsonlint"]
 let g:syntastic_ruby_checkers = ["mri"]
+
+
