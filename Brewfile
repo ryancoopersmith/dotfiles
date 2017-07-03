@@ -15,6 +15,7 @@ brew 'awscli'
 brew 'zsh-git-prompt'
 brew 'jsonlint'
 brew 'proselint'
+brew 'nvm'
 
 cask 'slack'
 cask 'steam'
