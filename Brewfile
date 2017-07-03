@@ -23,3 +23,5 @@ cask 'viscosity'
 cask 'kaleidoscope'
 cask 'docker'
 cask 'kitematic'
+cask 'iterm2'
+
