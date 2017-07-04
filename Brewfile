@@ -24,4 +24,5 @@ cask 'kaleidoscope'
 cask 'docker'
 cask 'kitematic'
 cask 'iterm2'
-
+cask 'arq'
+cask 'mist'
