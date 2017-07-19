@@ -13,3 +13,6 @@
 [submodule "vim.symlink/pack/plugins/start/syntastic"]
 	path = vim.symlink/pack/plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim.symlink/pack/plugins/start/supertab"]
+	path = vim.symlink/pack/plugins/start/supertab
+	url = https://github.com/ervandew/supertab.git
