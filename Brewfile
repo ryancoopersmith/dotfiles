@@ -4,6 +4,7 @@ tap 'homebrew/bundle'
 
 brew 'zsh'
 brew 'coreutils'
+brew 'cmake'
 brew 'grc'
 brew 'go'
 brew 'jq'
