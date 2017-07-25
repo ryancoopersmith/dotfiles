@@ -13,6 +13,12 @@
 [submodule "vim.symlink/pack/plugins/start/syntastic"]
 	path = vim.symlink/pack/plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "vim.symlink/pack/plugins/start/supertab"]
-	path = vim.symlink/pack/plugins/start/supertab
-	url = https://github.com/ervandew/supertab.git
+[submodule "vim.symlink/pack/plugins/start/vim-javascript"]
+	path = vim.symlink/pack/plugins/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim.symlink/pack/plugins/start/YouCompleteMe"]
+	path = vim.symlink/pack/plugins/start/YouCompleteMe
+	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "vim.symlink/pack/plugins/start/--force"]
+	path = vim.symlink/pack/plugins/start/--force
+	url = git@github.com:Valloric/YouCompleteMe.git
