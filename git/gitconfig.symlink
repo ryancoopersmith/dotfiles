@@ -20,9 +20,18 @@
 [apply]
         whitespace = nowarn
 [mergetool]
+        prompt = false
         keepBackup = false
+[mergetool "Kaleidoscope"]
+        cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" \"$REMOTE\"
+[merge]
+        tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+        cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
 [difftool]
         prompt = false
+[diff]
+        tool = Kaleidoscope
 [help]
         autocorrect = 1
 [push]
