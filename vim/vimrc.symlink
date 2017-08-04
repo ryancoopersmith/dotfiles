@@ -9,6 +9,9 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
+" Show tabs
+set list listchars=tab:›\ ,trail:∙
+
 "filetype plugins
 filetype indent plugin on
 
