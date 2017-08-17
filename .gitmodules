@@ -19,6 +19,3 @@
 [submodule "vim.symlink/pack/plugins/start/YouCompleteMe"]
 	path = vim.symlink/pack/plugins/start/YouCompleteMe
 	url = git@github.com:Valloric/YouCompleteMe.git
-[submodule "vim.symlink/pack/plugins/start/--force"]
-	path = vim.symlink/pack/plugins/start/--force
-	url = git@github.com:Valloric/YouCompleteMe.git
