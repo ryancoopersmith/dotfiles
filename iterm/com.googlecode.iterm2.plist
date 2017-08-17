@@ -47,26 +47,29 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
+	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
+	<dict>
+		<key>TB Is Shown</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>433 480 796 473 0 0 1680 1027 </string>
+	<string>269 144 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>3631 352 1590 602 3600 -30 1920 1057 </string>
+	<string>4254 575 570 452 3600 -30 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>4718 132 730 552 3600 -30 1920 1057 </string>
+	<string>3639 575 570 452 3600 -30 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>2270 82 570 452 1680 -30 1920 1057 </string>
+	<string>4868 575 570 452 3600 -30 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>1687 344 1910 602 1680 -30 1920 1057 </string>
+	<string>419 473 997 554 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>293 180 976 877 0 0 1920 1057 </string>
+	<string>656 50 570 452 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
-	<string>3662 235 1445 792 3600 -30 1920 1057 </string>
+	<string>81 320 1137 707 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
-	<string>2346 201 1123 826 1680 -30 1920 1057 </string>
+	<string>675 82 1053 945 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 7</key>
-	<string>1927 90 1462 937 1680 -30 1920 1057 </string>
-	<key>NSWindow Frame iTerm Window 8</key>
-	<string>-2091 -347 570 452 -2560 -390 2560 1417 </string>
+	<string>717 560 570 452 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -663,7 +666,7 @@
 			<key>Screen</key>
 			<integer>-1</integer>
 			<key>Scrollback Lines</key>
-			<integer>1000</integer>
+			<integer>10000</integer>
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -721,13 +724,17 @@
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>779D170A-7377-4B70-A40C-6847F198A491</string>
+	<string>17646773-F4E3-44AB-ADBD-3646BA59B236</string>
 	<key>NoSyncLastTipTime</key>
-	<real>522704964.10732901</real>
+	<real>524394913.71699202</real>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>519236679.380431</real>
+	<real>523581592.22359002</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
@@ -737,29 +744,6 @@
 		<string>0003</string>
 		<string>0004</string>
 		<string>0005</string>
-		<string>0006</string>
-		<string>0007</string>
-		<string>0008</string>
-		<string>0009</string>
-		<string>0010</string>
-		<string>0011</string>
-		<string>0012</string>
-		<string>0013</string>
-		<string>0014</string>
-		<string>0015</string>
-		<string>0016</string>
-		<string>0017</string>
-		<string>0018</string>
-		<string>0019</string>
-		<string>0020</string>
-		<string>0021</string>
-		<string>0022</string>
-		<string>0023</string>
-		<string>0024</string>
-		<string>0025</string>
-		<string>0026</string>
-		<string>0027</string>
-		<string>0028</string>
 	</array>
 	<key>PointerActions</key>
 	<dict>
@@ -801,11 +785,11 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=26</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=25</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-25T17:21:20Z</date>
+	<date>2017-08-10T10:00:53Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>URLHandlersByGuid</key>
@@ -817,6 +801,10 @@
 	</dict>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findIgnoreCase_iTerm</key>
+	<true/>
+	<key>findRegex_iTerm</key>
+	<false/>
 	<key>iTerm Version</key>
 	<string>3.0.15</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>

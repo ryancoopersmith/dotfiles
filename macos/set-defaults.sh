@@ -11,6 +11,7 @@ chflags nohidden ~/Library
 defaults write com.apple.dock wvous-bl-corner -int 5
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
+defaults write com.apple.dock 'orientation' -string 'left'
 
 # Set up Safari for development.
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
