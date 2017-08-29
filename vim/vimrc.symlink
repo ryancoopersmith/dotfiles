@@ -47,8 +47,15 @@ set vb
 colorscheme solarized8_dark
 
 "netrw
-let g:netrw_listsytle = 2
-let g:netrw_browse_split = 3
+let g:netrw_banner = 0
+let g:netrw_listsytle = 0
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_preview = 1
+let g:netrw_winsize = 20 
+
+noremap <C-E> :Lexplore<CR>
+
 
 "airline
 let g:airline_theme='solarized'
