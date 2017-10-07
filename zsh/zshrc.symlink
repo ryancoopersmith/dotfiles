@@ -51,12 +51,6 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 
 PATH=$PATH:$HOME/workspace/bin
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/eric/Documents/Code/graphql-lamba-api/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/eric/Documents/Code/graphql-lamba-api/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/eric/Documents/Code/graphql-lamba-api/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/eric/Documents/Code/graphql-lamba-api/node_modules/tabtab/.completions/sls.zsh
-
 # enable autoenv last so env processing can use nvm and rvm and other shell functions
 source /usr/local/opt/autoenv/activate.sh
+
