@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/ryancoopersmith/workspace/moven-app/public/js/routers'
-let g:netrw_dirhist_2='/Users/ryancoopersmith/.oh-my-zsh/plugins/osx'
-let g:netrw_dirhist_3='/Users/ryancoopersmith/workspace/moven-app/public/js/mobile'
-let g:netrw_dirhist_4='/Users/ryancoopersmith/Library/Haskell/bin'
-let g:netrw_dirhist_5='/Users/ryancoopersmith/haskell/real-world-haskell-exercises'
-let g:netrw_dirhist_6='/Users/ryancoopersmith/dotfiles/vim.symlink'
-let g:netrw_dirhist_7='/Users/ryancoopersmith/dotfiles/vim.symlink/pack'
-let g:netrw_dirhist_8='/Users/ryancoopersmith/dotfiles/vim.symlink/pack/plugins'
-let g:netrw_dirhist_9='/Users/ryancoopersmith/dotfiles/vim.symlink/pack/plugins/start'
+let g:netrw_dirhist_cnt =0

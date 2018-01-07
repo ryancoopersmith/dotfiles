@@ -16,6 +16,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'godlygeek/tabular' " great for working with Haskell
+Plugin 'ntpeters/vim-better-whitespace' " :StripWhitespace
 Plugin 'mileszs/ack.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
