@@ -1,0 +1,103 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/syntastic'
+Plugin 'mattn/emmet-vim'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-vinegar'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'godlygeek/tabular' " great for working with Haskell
+Plugin 'mileszs/ack.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'keith/swift.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
+call vundle#end()
+
+filetype plugin indent on
+syntax on
+syntax enable
+set background=dark
+colorscheme solarized
+set number
+set laststatus=2
+
+let g:airline_theme='simple'
+let g:airline_solarized_bg='dark'
+let g:syntastic_javascript_checkers = ['jshint']
+
+set tabstop=4
+set expandtab
+set incsearch
+set hlsearch
+set wildmenu
+set history=200
+set ignorecase
+set smartcase
+au InsertEnter * set infercase
+au InsertLeave * set ignorecase
+
+" space is the best candidate for leader since it does virtually nothing by default
+let mapleader = "\<space>"
+
+" using a special register for the system clipboard is not working anymore
+" below are functions used to directly call the system clipboard instead
+" only vim's "x register will get cluttered with text from the system clipboard 
+" all of vim's other registers (including the yank register "0 but excluding default
+" default (") always gets added to when yanking to a named register) will remain
+" independent of the system clipboard as like before
+function! ClipboardYank()
+  call system('pbcopy', @x)
+endfunction
+
+function! ClipboardPaste()
+  let @x = system('pbpaste')
+endfunction
+
+" this mapping yanks the visually selected text into the system clipboard
+vnoremap <silent> <leader>y "xy:call ClipboardYank()<CR>
+" this mapping cuts the visually selected text into the system clipboard
+vnoremap <silent> <leader>x "xd:call ClipboardYank()<CR>
+" this mapping pastes the text from the system clipboard at the curent
+" cursor position in normal mode
+nnoremap <silent> <leader>p :call ClipboardPaste()<CR>"xp
+
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+runtime macros/matchit.vim
+nnoremap <silent> <C-l> :nohlsearch<CR>
+xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
+
+function! s:VSetSearch(cmdtype)
+  let temp = @s
+  norm! gv"sy
+  let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
+  let @s = temp
+endfunction
+
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
+autocmd QuickFixCmdPost *grep* cwindow
+
+" set syntax highlighting rules on conf files under home to upstart (this is
+" an assumption that all conf files under development (under home) are
+" upstart scripts; this may cause issues on non-upstart conf files
+au BufNewFile,BufRead /Users/ryancoopersmith/*.conf setf upstart
+
+" when writing a file and a backup is made
+" make a copy of the file and overwrite the original one
+" need to set this so that webpack can automatically detect changes in files
+" NOTE: performance may be slightly impacted by this writing method
+set backupcopy=yes
