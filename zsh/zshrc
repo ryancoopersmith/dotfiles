@@ -94,6 +94,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Add Haskell executables to PATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 export ANDROID_HOME=/Users/ryancoopersmith/Library/Android/sdk
 export PHANTOMJS_BIN=/usr/local/bin/phantomjs
@@ -113,3 +114,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 while read motd; do
   echo $motd
 done < $HOME/.motd
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/ryancoopersmith/.sdkman"
+[[ -s "/Users/ryancoopersmith/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ryancoopersmith/.sdkman/bin/sdkman-init.sh"
