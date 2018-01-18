@@ -15,8 +15,11 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'godlygeek/tabular' " great for working with Haskell
-Plugin 'ntpeters/vim-better-whitespace' " :StripWhitespace
+Plugin 'godlygeek/tabular'
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'shougo/vimproc.vim' " required for ghcmod-vim plugin
+Plugin 'eagletmt/neco-ghc'
+Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'mileszs/ack.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'leafgarland/typescript-vim'
@@ -102,3 +105,5 @@ au BufNewFile,BufRead /Users/ryancoopersmith/*.conf setf upstart
 " need to set this so that webpack can automatically detect changes in files
 " NOTE: performance may be slightly impacted by this writing method
 set backupcopy=yes
+
+hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
