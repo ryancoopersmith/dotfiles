@@ -111,9 +111,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Display my message of the day
-while read motd; do
-  echo $motd
-done < $HOME/.motd
+cat $HOME/.motd
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/ryancoopersmith/.sdkman"
