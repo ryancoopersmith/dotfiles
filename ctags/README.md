@@ -1,7 +1,5 @@
-## ctags
+## ctags configuration
 
-.ctags file is set up to provide compatibility with js + ts
+javascript and typescript config was taken from [here](https://medium.com/adorableio/modern-javascript-ctags-configuration-199884dbcc1)
 
-configuration was taken from [here](https://medium.com/adorableio/modern-javascript-ctags-configuration-199884dbcc1)
-
-**TODO**: set it up to work with other languages as well (i.e swift, haskell)
+swift config was taken from the swift.vim plugin
