@@ -1,2 +1,3 @@
 --ignore-dir=node_modules/
 --type-set=ts:ext:ts
+--type-set=scss:ext:scss
