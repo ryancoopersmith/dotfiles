@@ -36,6 +36,7 @@ brew 'shellcheck'
 brew 'sqlite'
 brew 'tmux'
 brew 'zsh-syntax-highlighting'
+brew 'speedtest-cli'
 
 
 cask 'slack'
