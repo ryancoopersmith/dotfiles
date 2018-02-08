@@ -1,0 +1,16 @@
+name: haskell
+root: ~/haskell
+
+windows:
+  - dev:
+      root: ~/haskell/real-world-haskell-exercises
+      layout: even-horizontal
+      panes:
+        - ghci
+        -
+
+  - build:
+      root: ~/haskell/real-world-haskell-exercises/build
+      layout: even-horizontal
+      panes:
+        -

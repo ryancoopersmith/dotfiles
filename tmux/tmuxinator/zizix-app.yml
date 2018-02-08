@@ -1,0 +1,17 @@
+name: zizix-app
+root: ~/zizix-app
+
+windows:
+  - scratch:
+      root: ~/zizix-app/src
+      layout: even-horizontal
+      panes:
+        -
+
+  - tools:
+      pre:
+        - nvm use 8.6.0
+      layout: even-horizontal
+      panes:
+        - ionic serve
+        -
