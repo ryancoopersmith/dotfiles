@@ -107,3 +107,6 @@ au BufNewFile,BufRead /Users/ryancoopersmith/*.conf setf upstart
 set backupcopy=yes
 
 hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
+
+" search upwards looking for tags file (enabled by use of ;)
+set tags=./tags,tags;
