@@ -55,10 +55,10 @@ au InsertLeave * set ignorecase
 " space is the best candidate for leader since it does virtually nothing by default
 let mapleader = "\<space>"
 
-" using a special register for the system clipboard is not working anymore
+" using a special register for the system clipboard is not working anymore on macOS
 " below are functions used to directly call the system clipboard instead
-" only vim's "x register will get cluttered with text from the system clipboard 
-" all of vim's other registers (including the yank register "0 but excluding default
+" only vim's "x register will get cluttered with text from the system clipboard
+" all of vim's other registers (including the yank register "0 but excluding
 " default (") always gets added to when yanking to a named register) will remain
 " independent of the system clipboard as like before
 function! ClipboardYank()
