@@ -1,3 +1,4 @@
 --ignore-dir=node_modules/
 --type-set=ts:ext:ts
---type-set=scss:ext:scss
+# NOTE: most types are there, just using the wrong type name (i.e scss is sass, {m,h} is objc)
+# run ack --help-type to see all types
