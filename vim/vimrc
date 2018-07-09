@@ -78,7 +78,11 @@ vnoremap <silent> <leader>x "xd:call ClipboardYank()<CR>
 nnoremap <silent> <leader>p :call ClipboardPaste()<CR>"xp
 
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" The matchit.vim script allows you to configure % to match more than just single characters
+" i.e html tags, etc.
 runtime macros/matchit.vim
+
 nnoremap <silent> <C-l> :nohlsearch<CR>
 xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>

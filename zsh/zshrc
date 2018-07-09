@@ -90,6 +90,8 @@ export EDITOR='vim'
 alias tree="tree -C"
 alias le="less"
 
+export VIMRUNTIME="/usr/share/vim/vim80"
+
 # Add Haskell executables to PATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
