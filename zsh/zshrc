@@ -97,6 +97,10 @@ alias it="ifconfig | grep \"inet 192\.168\.[0-9]\.[0-9]\{0,3\}\" | awk '{ print 
 
 alias ic="ionic cordova"
 
+alias cleartmp="find \$TMPDIR -name 'tmp.*' -exec rm -rf {} \; > /dev/null 2>&1"
+
+alias gcr="git add -A && git reset --hard"
+
 # Add Haskell executables to PATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -127,6 +131,24 @@ pgpass() {
         cat ~/.pgpass | grep "$1" | awk -F ':' '{ printf "%s\n%s\n\n",$1,$5 }' | sed '$d'
     else
         echo "No DBs found for this environment"
+    fi
+}
+
+grbu() {
+    if [ -z "$1" ]; then
+        echo "usage: grbu <REBASE_UNTIL>"
+        echo "example: grbu app-2.4"
+    else
+        git rebase -i HEAD~"$(git log --oneline HEAD..."$1" | wc -l | sed -e 's/ //g')"
+    fi
+}
+
+sleepin() {
+    if [ -z "$1" ]; then
+        echo "usage: sleepin <SECONDS_UNTILL_SLEEP>"
+        echo "example: sleepin 120"
+    else
+        sudo true && sleep $1 && sudo pmset sleepnow
     fi
 }
 
