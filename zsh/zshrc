@@ -101,6 +101,8 @@ alias cleartmp="find \$TMPDIR -name 'tmp.*' -exec rm -rf {} \; > /dev/null 2>&1"
 
 alias gcr="git add -A && git reset --hard"
 
+alias gb="git --no-pager branch"
+
 # Add Haskell executables to PATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
