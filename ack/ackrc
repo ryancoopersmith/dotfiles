@@ -1,4 +1,8 @@
 --ignore-dir=node_modules/
+--ignore-file=is:tags
 --type-set=ts:ext:ts
+--type-set=plist:ext:plist
+--type-set=md:ext:md
+--type-set=txt:ext:txt
 # NOTE: most types are there, just using the wrong type name (i.e scss is sass, {m,h} is objc)
 # run ack --help-type to see all types
