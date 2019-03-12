@@ -154,6 +154,18 @@ sleepin() {
     fi
 }
 
+check_adb_devices() {
+    # devices sometimes disconnect randomly and have issues connecting
+    while true; do
+        sleep 1
+        if [[ "$(adb devices | head -2 | tail -1)" ]]; then
+            echo "CONNECTED\!"
+        else
+            echo "NOT CONNECTED :("
+        fi
+    done
+}
+
 set -o vi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
