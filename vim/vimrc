@@ -35,6 +35,7 @@ syntax enable
 set background=dark
 colorscheme solarized
 set number
+set relativenumber
 set laststatus=2
 
 let g:airline_theme='simple'
@@ -42,13 +43,16 @@ let g:airline_solarized_bg='dark'
 let g:syntastic_javascript_checkers = ['jshint']
 
 set tabstop=4
+set shiftwidth=4
 set expandtab
 set incsearch
 set hlsearch
 set wildmenu
-set history=200
+set history=1000
 set ignorecase
 set smartcase
+set autoindent
+set lazyredraw
 au InsertEnter * set infercase
 au InsertLeave * set ignorecase
 
@@ -98,6 +102,8 @@ nnoremap & :&&<CR>
 xnoremap & :&&<CR>
 
 autocmd QuickFixCmdPost *grep* cwindow
+" don't automatically comment next line on enter/o if already commenting
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " set syntax highlighting rules on conf files under home to upstart (this is
 " an assumption that all conf files under development (under home) are
@@ -114,3 +120,6 @@ hi QuickFixLine cterm=None ctermbg=256 guibg=#ffff00
 
 " search upwards looking for tags file (enabled by use of ;)
 set tags=./tags,tags;
+
+" keep swapfiles in a central location to avoid polluting file system
+set directory^=$HOME/.vim/swapfiles//
