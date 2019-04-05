@@ -90,6 +90,8 @@ export EDITOR='vim'
 alias tree="tree -C"
 alias le="less"
 
+alias list_swap="ls ~/.vim/swapfiles/ | sed 's/%/\//g'"
+
 # Informational aliases
 alias dt="date \"+DATE: %m-%d%nTIME: %H:%M\"" # gets formatted day/time
 alias bt="echo \"Battery: \"\"\$(pmset -g batt | grep -Eo \"\d+%\" | cut -d% -f1)\"\"%\"" # gets battery percentage
