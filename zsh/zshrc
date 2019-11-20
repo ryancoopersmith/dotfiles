@@ -95,7 +95,7 @@ alias list_swap="ls ~/.vim/swapfiles/ | sed 's/%/\//g'"
 # Informational aliases
 alias dt="date \"+DATE: %m-%d%nTIME: %H:%M\"" # gets formatted day/time
 alias bt="echo \"Battery: \"\"\$(pmset -g batt | grep -Eo \"\d+%\" | cut -d% -f1)\"\"%\"" # gets battery percentage
-alias it="ifconfig | grep \"inet 192\.168\.[0-9]\.[0-9]\{0,3\}\" | awk '{ print \"Local IP Address:\", \$2 }' | head -n1" # gets local IP address
+alias ip="ifconfig | grep \"inet 192\.168\.[0-9]\.[0-9]\{0,3\}\" | awk '{ print \"Local IP Address:\", \$2 }' | head -n1" # gets local IP address
 
 alias ic="ionic cordova"
 
@@ -138,6 +138,15 @@ pgpass() {
     fi
 }
 
+pgpwd() {
+    if grep "$1" ~/.pgpass > /dev/null 2>&1; then
+        cat ~/.pgpass | ack "$1" | rev | awk -F ':' '{ print $1 }' | rev | pbcopy
+        echo "Password copied to clipboard for $(cat ~/.pgpass | ack "$1" | awk -F ':' '{ print $1 }')"
+    else
+        echo "DB not found"
+    fi
+}
+
 grbu() {
     if [ -z "$1" ]; then
         echo "usage: grbu <REBASE_UNTIL>"
@@ -161,10 +170,20 @@ check_adb_devices() {
     while true; do
         sleep 1
         if [[ "$(adb devices | head -2 | tail -1)" ]]; then
-            echo "CONNECTED\!"
+            echo 'CONNECTED!'
         else
             echo "NOT CONNECTED :("
         fi
+    done
+}
+
+gbro() {
+    gbr | grep -v moven | grep -v jim | grep -v BAK | grep -v app- | awk -F '/' '{ print "  "$2 }'
+}
+
+stay_awake() {
+    while true; do
+        cliclick w:540000 dc:.
     done
 }
 
