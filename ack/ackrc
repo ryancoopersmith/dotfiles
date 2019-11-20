@@ -1,3 +1,6 @@
+--smart-case
+--follow
+
 --color-filename=red
 --color-match=green
 --color-lineno=blue
