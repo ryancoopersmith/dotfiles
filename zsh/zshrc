@@ -51,7 +51,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions vi-mode colored-man-pages jump autoenv)
+plugins=(git zsh-autosuggestions vi-mode colored-man-pages jump autoenv chucknorris)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -204,3 +204,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/ryancoopersmith/.sdkman"
 [[ -s "/Users/ryancoopersmith/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/ryancoopersmith/.sdkman/bin/sdkman-init.sh"
+
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+PS1='$(kube_ps1)'$PS1
+# export KUBECONFIG=$KUBECONFIG:~/.kube/td-sys2.conf
+# export KUBECONFIG=$KUBECONFIG:~/.kube/td-moven.conf
