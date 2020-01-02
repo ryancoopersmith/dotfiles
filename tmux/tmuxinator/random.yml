@@ -6,9 +6,16 @@ windows:
       layout: even-horizontal
       panes:
         -
-        -
 
   - other:
       layout: even-horizontal
       panes:
         -
+        -
+  - notes:
+      layout: even-horizontal
+      panes:
+        - motd:
+          - pandoc -f markdown -t plain $HOME/.motd.md
+        - todo:
+          - pandoc -f markdown -t plain $HOME/Downloads/TODO.md

@@ -183,6 +183,7 @@ gbro() {
 
 stay_awake() {
     while true; do
+        clear
         cliclick w:540000 dc:.
     done
 }
@@ -194,7 +195,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # Display my message of the day
-pandoc -f markdown -t plain $HOME/.motd.md
+# pandoc -f markdown -t plain $HOME/.motd.md
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
