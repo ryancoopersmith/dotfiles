@@ -109,27 +109,6 @@ alias gb="git --no-pager branch"
 
 alias killbg="jobs -p | awk '{ print \$3 }' | xargs kill -9"
 
-watch() {
-    if [ -z "$1" ]; then
-        echo "watch usage: watch <command> <interval>"
-    else
-        cmd="$1"
-
-        if [ -z $2 ]; then
-            interval="1"
-        else
-            interval="$2"
-        fi
-
-        while :; do
-            clear
-            date
-            zsh -c "$cmd"
-            sleep "$interval"
-        done
-    fi
-}
-
 # Add Haskell executables to PATH
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -138,10 +117,20 @@ export ANDROID_HOME=/Users/ryancoopersmith/Library/Android/sdk
 export PHANTOMJS_BIN=/usr/local/bin/phantomjs
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-clear
+latest_chart() {
+    if [ -z "$1" ]; then
+        echo "usage: latest_chart <moven_chart_name>"
+        echo "NOTE: the first characters of the search string need be unambiguous"
+    else
+        version=$(https charts.moven.us/index.yaml | grep "charts/${1}" | sed "s/charts\/$1//g" | sed 's/.tgz//g' | sed 's/[ -]//g' | sed 's/[a-zA-Z]//g' | sort | tail -1)
+
+        if [ -z "$version" ]; then
+            echo "Chart not found. Make sure your search string is correct"
+        else
+            echo "${1}: ${version}"
+        fi
+    fi
+}
 
 muxend() {
     read "confirm?End all open tmux sessions? (Y/N): "
@@ -214,6 +203,27 @@ stay_awake() {
     done
 }
 
+watch() {
+    if [ -z "$1" ]; then
+        echo "watch usage: watch <command> <interval>"
+    else
+        cmd="$1"
+
+        if [ -z $2 ]; then
+            interval="1"
+        else
+            interval="$2"
+        fi
+
+        while :; do
+            clear
+            date
+            zsh -c "$cmd"
+            sleep "$interval"
+        done
+    fi
+}
+
 set -o vi
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
@@ -236,3 +246,12 @@ export SDKMAN_DIR="/Users/ryancoopersmith/.sdkman"
 
 source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+nvm use default
+clear
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home
+export PATH=$JAVA_HOME/bin:$PATH
