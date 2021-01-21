@@ -122,7 +122,16 @@ latest_chart() {
         echo "usage: latest_chart <moven_chart_name>"
         echo "NOTE: the first characters of the search string need be unambiguous"
     else
-        version=$(https charts.moven.us/index.yaml | grep "charts/${1}" | sed "s/charts\/$1//g" | sed 's/.tgz//g' | sed 's/[ -]//g' | sed 's/[a-zA-Z]//g' | sort | tail -1)
+        version=$(
+            https charts.moven.us/index.yaml | \
+            grep "charts/${1}" | \
+            sed "s/charts\/$1//g" | \
+            sed 's/.tgz//g' | \
+            sed 's/[ -]//g' | \
+            sed '/[0-9][a-z]/d' | \
+            sed 's/[a-zA-Z]//g' | \
+            sort -n | tail -1
+        )
 
         if [ -z "$version" ]; then
             echo "Chart not found. Make sure your search string is correct"
